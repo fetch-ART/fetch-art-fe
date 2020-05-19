@@ -26,12 +26,13 @@ export default class ListPage extends Component {
                 hello
                 <select onChange={this.handleFilter}>
                     <option value="">All</option>
-                    {/* {
+                    {
                     this.state.imageList.map(image => {
+                        <option value={nasaData.url}></option>
 
 
                     })
-                } */}
+                }
                 </select>
                 
             </div>

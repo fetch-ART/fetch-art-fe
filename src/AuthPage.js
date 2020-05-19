@@ -70,3 +70,4 @@ export default class AuthPage extends Component {
         )
     }
 }
+
