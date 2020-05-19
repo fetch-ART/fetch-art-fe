@@ -8,6 +8,8 @@ import AuthPage from './AuthPage.js';
 import './App.css';
 import AboutUs from './AboutUs.js';
 import HomePage from './HomePage.js';
+import DetailPage from './DetailPage.js';
+import ListPage from './ListPage.js';
 
 export default class App extends Component {
 
@@ -39,6 +41,16 @@ export default class App extends Component {
                           path="/aboutus" 
                           exact
                           render={(routerProps) => <AboutUs {...routerProps} />} 
+                      />
+                      <Route 
+                          path="/list" 
+                          exact
+                          render={(routerProps) => <ListPage {...routerProps} />} 
+                      />
+                      <Route 
+                          path="/detail" 
+                          exact
+                          render={(routerProps) => <DetailPage {...routerProps} />} 
                       />
                      
                       
