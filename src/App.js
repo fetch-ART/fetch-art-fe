@@ -51,7 +51,9 @@ export default class App extends Component {
                       <Route 
                             path="/detail/:id" 
                             exact
-                            render={(routerProps) => <ImageDetailPage {...routerProps} />} 
+                            render={(routerProps) => <ImageDetailPage {...routerProps}
+                            token={this.state.token} />} 
+
                         />
                      
                       
