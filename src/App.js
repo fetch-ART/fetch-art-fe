@@ -8,8 +8,9 @@ import AuthPage from './AuthPage.js';
 import './App.css';
 import AboutUs from './AboutUs.js';
 import HomePage from './HomePage.js';
-import DetailPage from './DetailPage.js';
-import ListPage from './ListPage.js';
+import ImageDetailPage from './ImageDetailPage.js';
+import MoodButtonPage from './MoodButtonPage.js';
+
 
 export default class App extends Component {
 
@@ -45,13 +46,13 @@ export default class App extends Component {
                       <Route 
                           path="/list" 
                           exact
-                          render={(routerProps) => <ListPage {...routerProps} />} 
+                          render={(routerProps) => <MoodButtonPage {...routerProps} />} 
                       />
                       <Route 
-                          path="/detail" 
-                          exact
-                          render={(routerProps) => <DetailPage {...routerProps} />} 
-                      />
+                            path="/detail/:id" 
+                            exact
+                            render={(routerProps) => <ImageDetailPage {...routerProps} />} 
+                        />
                      
                       
                       

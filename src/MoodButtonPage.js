@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import request from 'superagent'
-import { Link } from 'react-router-dom'
-import DetailPage from './DetailPage.js'
+// import { Link } from 'react-router-dom'
+import ListItem from './ListItem.js'
 
-export default class ListPage extends Component {
+export default class MoodButtonPage extends Component {
     state = {
         data: [],
 
@@ -16,32 +16,31 @@ export default class ListPage extends Component {
 
     handleClick = async () => {
         //find a way to hide our key
-        const fetchData = await request.get('https://api.unsplash.com/search/photos?query=happy&page=1&client_id=CUNUKhGnQYLX8XHwEllBIUU35CEBJkEoPA4YQD1aYXQ').set('Authorization', this.state.token)
+        const fetchData = await request.get('http://localhost:3000/api/list/happy').set('Authorization', this.state.token)
 
         this.setState({ data: fetchData.body.results })
         
     }
     
     render() {
+        console.log(this.state.data);
         return (
             <div>
                 <button className='happy-button' onClick={this.handleClick}>Happy</button>
+
                 {
                     this.state.data.map(item => {
-                        return <li> <Link to='/detail' > <img src = {item.urls.regular} alt={item.alt_description}  /> 
-                        
-                        <DetailPage detail={item}/>
-
-                        </Link>
-
-                            
-                        </li>
+                        return  <div>
+                            <ListItem detail={item}/>
+                        </div>
                     })
                 }
+
             </div>
         )
     }
 }
+
 
 // list page is working when "happy" button is clicked, detail page shows "cannot read property description of undefined"
 // we will pick back up at the detail page
