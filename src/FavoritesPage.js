@@ -2,15 +2,19 @@ import React, { Component } from 'react'
 import request from 'superagent';
 // import ListItem from './ListItem.js';
 
+
 export default class FavoritesPage extends Component {
     
     state = {
-        data: [],
-        favoritesArray: []
-    }
+        data: []
+    };
 
-    componentDidMount = async () => { 
-        
+
+
+    loadFavorites = async () => {
+
+        let favoritesArray = []
+
         const fetchedData = await request.get(`http://localhost:3000/api/favorites`).set('Authorization', this.props.token)
 
         console.log(fetchedData)
@@ -18,15 +22,25 @@ export default class FavoritesPage extends Component {
 
         // const fetchedData = await request.get(`http://localhost:3000/api/detail/${this.state.data.image_id}`).set('Authorization', this.props.token)
         this.state.data.map(favorite => {
-            return this.state.favoritesArray.push(favorite.image_id)
+            return favoritesArray.push(favorite.image_id)
             
         })
-        console.log(this.state.favoritesArray, 'favoritesArray')
+        console.log(favoritesArray, 'favoritesArray')
+        return favoritesArray;
+    }
+    
+    componentDidMount = async () => { 
+
+        await loadFavorites();
         
     }
     
+    
+
     render() {
+        console.log(loadFavorites);
         // console.log(this.state.data)
+        console.log(favoritesArray);
         return (
             <div>
                 hello
@@ -37,7 +51,7 @@ export default class FavoritesPage extends Component {
                 </li>
             }) 
             } */}
-            <h1>{JSON.parse(JSON.stringify(this.state.favoritesArray))} FAVORITES!</h1>
+            <h1>{favoritesArray} FAVORITES!</h1>
             </div>
         )
     }
