@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import request from 'superagent'
+import './AuthPage.css'
+import LogoNoText from './Logo_NoText.jpg'
 
 export default class AuthPage extends Component {
 
@@ -41,42 +43,50 @@ export default class AuthPage extends Component {
     render() {
 
         return (
-        <>
-            <div>
-                <h3>Sign Up</h3>
-                <form onSubmit={this.handleSignUp}>
-                    <label>
-                        Email
-                        <input type='text' onChange={this.handleEmail} name='email' required/>
-                    </label>
+        <section>
+            <img src={LogoNoText} alt=""/>
+            
+            <section className="divider-bar"> </section>
 
-                    <label>
-                        Password
-                        <input type='text' onChange={this.handlePassword} name='password' required />
-                        <input type='submit' />
-                    </label>
-                </form>
+            <section className='flex-container'>
+                
+                <div className='sign-up'>
+                    <h3>Sign Up</h3>
+                    <form onSubmit={this.handleSignUp}>
+                        <label>
+                            Email
+                            <input type='text' onChange={this.handleEmail} name='email' required/>
+                        </label>
+                        <br></br>
+                        <label>
+                            Password
+                            <input type='text' onChange={this.handlePassword} name='password' required />
+                            <br></br>
+                            <input type='submit' />
+                        </label>
+                    </form>
+                </div>
+            
 
-            </div>
+                <div className='sign-in'>
 
-            <div>
-
-                <h3>Sign In</h3>
-                <form onSubmit={this.handleSignIn}>
-                    <label>
-                        Email
-                        <input type='text' onChange={this.handleEmail} name='email' />
-                    </label>
-
-                    <label>
-                        Password
-                        <input type='text' onChange={this.handlePassword} name='password' />
-                        <input type='submit' />
-                    </label>
-                </form>
-            </div>
-
-        </>
+                    <h3>Login</h3>
+                    <form onSubmit={this.handleSignIn}>
+                        <label>
+                            Email
+                            <input type='text' onChange={this.handleEmail} name='email' />
+                        </label>
+                        <br></br>
+                        <label>
+                            Password
+                            <input type='text' onChange={this.handlePassword} name='password' />
+                            <br></br>
+                            <input type='submit' />
+                        </label>
+                    </form>
+                </div>
+            </section>
+        </section>
         )
     }
 }

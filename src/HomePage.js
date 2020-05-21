@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import NavSignUp from './NavSignUp.js';
-import './App.css';
+import './HomePage.css';
 import './NavSignUp.css';
 import Logo from './fetchART.jpg';
 

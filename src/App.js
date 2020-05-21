@@ -5,7 +5,7 @@ import {
   Switch, 
 } from 'react-router-dom';
 import AuthPage from './AuthPage.js';
-import './App.css';
+// import './App.css';
 import AboutUs from './AboutUs.js';
 import HomePage from './HomePage.js';
 import ImageDetailPage from './ImageDetailPage.js';

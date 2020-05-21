@@ -24,3 +24,7 @@ button:hover{
       width: 75%;
       text-align: center;
   }
+
+  img {
+    width: 500px;
+  }
