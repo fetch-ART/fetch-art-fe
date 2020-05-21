@@ -20,7 +20,7 @@ export default class MoodButtonPage extends Component {
 
         await this.setState({ searchQuery: mood })
 
-        const fetchData = await request.get(`http://localhost:3000/api/list/'${this.state.searchQuery}'`).set('Authorization', this.state.token)
+        const fetchData = await request.get(`http://nameless-hollows-93608.herokuapp.com/api/list/'${this.state.searchQuery}'`).set('Authorization', this.state.token)
 
         this.setState({ data: fetchData.body.results })
         
