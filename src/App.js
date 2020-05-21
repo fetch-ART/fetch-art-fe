@@ -10,6 +10,7 @@ import AboutUs from './AboutUs.js';
 import HomePage from './HomePage.js';
 import ImageDetailPage from './ImageDetailPage.js';
 import MoodButtonPage from './MoodButtonPage.js';
+import FavoritesPage from './FavoritesPage.js';
 
 
 export default class App extends Component {
@@ -52,6 +53,13 @@ export default class App extends Component {
                             path="/detail/:id" 
                             exact
                             render={(routerProps) => <ImageDetailPage {...routerProps}
+                            token={this.state.token} />} 
+
+                        />
+                        <Route 
+                            path="/favorites" 
+                            exact
+                            render={(routerProps) => <FavoritesPage {...routerProps}
                             token={this.state.token} />} 
 
                         />
