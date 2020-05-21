@@ -24,22 +24,25 @@ export default class FavoritesPage extends Component {
 
         await this.loadFavorites();
 
-
     }
 
     render() {
 
         return (
+            <>
             <div>
                 {
                     this.state.data.map(item => {
                         return  <div>
                             <ListItem detail={item}/>
+                            <button>Remove</button>
                         </div>
                     })
                 }
 
             </div>
+
+            </>
         )
     }
 }
