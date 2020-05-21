@@ -19,9 +19,9 @@ export default class MoodButtonPage extends Component {
         const fetchData = await request.get('http://localhost:3000/api/list/happy').set('Authorization', this.state.token)
 
         this.setState({ data: fetchData.body.results })
-        
+
     }
-    
+
     render() {
         console.log(this.state.data);
         return (
