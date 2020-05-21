@@ -6,7 +6,8 @@ import ListItem from './ListItem.js';
 export default class FavoritesPage extends Component {
 
     state = {
-        data: []
+        data: [],
+        newData: ''
     }
 
     loadFavorites = async () => {
@@ -26,6 +27,17 @@ export default class FavoritesPage extends Component {
 
     }
 
+    handleClick = async (item) => {
+
+       
+        console.log(item)
+        await request.delete(`http://localhost:3000/api/favorites/${item.id}`).set('Authorization', this.props.token)
+        
+        
+       
+       await this.loadFavorites();
+    }
+
     render() {
 
         return (
@@ -35,7 +47,7 @@ export default class FavoritesPage extends Component {
                     this.state.data.map(item => {
                         return  <div>
                             <ListItem detail={item}/>
-                            <button>Remove</button>
+                            <button onClick={ () => this.handleClick(item)}>Remove</button>
                         </div>
                     })
                 }
