@@ -6,6 +6,7 @@ import ListItem from './ListItem.js'
 export default class MoodButtonPage extends Component {
     state = {
         data: [],
+        searchQuery: ''
 
     }
 
@@ -14,19 +15,28 @@ export default class MoodButtonPage extends Component {
         this.setState({ token: currentToken})
     }
 
-    handleClick = async () => {
+    handleClick = async (mood) => {
         //find a way to hide our key
-        const fetchData = await request.get('http://localhost:3000/api/list/happy').set('Authorization', this.state.token)
+
+        await this.setState({ searchQuery: mood })
+
+        const fetchData = await request.get(`http://nameless-hollows-93608.herokuapp.com/api/list/'${this.state.searchQuery}'`).set('Authorization', this.state.token)
 
         this.setState({ data: fetchData.body.results })
-
+        
     }
-
+    
     render() {
+        console.log(this.state.searchQuery)
         console.log(this.state.data);
         return (
             <div>
-                <button className='happy-button' onClick={this.handleClick}>Happy</button>
+                <button className='mood-button' onClick={ () => this.handleClick('happy')}>Happy</button>
+                <button className='mood-button' onClick={ () => this.handleClick('calm')}>Calm</button>
+                <button className='mood-button' onClick={ () => this.handleClick('love')}>Love</button>
+                <button className='mood-button' onClick={ () => this.handleClick('meditative')}>Meditative</button>
+                <button className='mood-button' onClick={ () => this.handleClick('friend')}>Friend</button>
+                <button className='mood-button' onClick={ () => this.handleClick('relax')}>Relax</button>
 
                 {
                     this.state.data.map(item => {
