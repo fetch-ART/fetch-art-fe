@@ -10,6 +10,7 @@ export default class FavoritesPage extends Component {
         newData: ''
     }
 
+
     loadFavorites = async () => {
         const fetchedData = await request.get(`http://localhost:3000/api/favorites`).set('Authorization', this.props.token)
 

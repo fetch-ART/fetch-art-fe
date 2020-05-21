@@ -26,7 +26,7 @@ export default class AuthPage extends Component {
         e.preventDefault();
         const data = await request.post(`http://localhost:3000/auth/signup`, this.state)
         this.setState({ token: data.body.token })
-        localStorage.setItem('TOKEN', data.body.token)
+        this.props.handleTokenChange(data.body.token, data.body.email)
         this.props.history.push('/list')
     }
 
@@ -35,6 +35,7 @@ export default class AuthPage extends Component {
         e.preventDefault();
         const data = await request.post('http://localhost:3000/auth/signin', this.state)
         this.setState({ success: data.body })
+        this.props.handleTokenChange(data.body.token, data.body.email)
         this.props.history.push('/list')
     }
 

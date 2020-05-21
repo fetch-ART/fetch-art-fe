@@ -15,10 +15,13 @@ import FavoritesPage from './FavoritesPage.js';
 
 export default class App extends Component {
 
-  state = { token: localStorage.getItem("TOKEN")}
+  state = { 
+        token: localStorage.getItem("TOKEN"),
+            user: ''
+        }
 
-  handleTokenChange = (myToken) => { 
-    this.setState({ token: myToken});
+  handleTokenChange = (myToken, user) => { 
+    this.setState({ token: myToken, user: user });
     localStorage.setItem("TOKEN", myToken);
   }
 
@@ -26,6 +29,7 @@ export default class App extends Component {
       return (
           
           <div className="container">
+              {this.state.user}
               <Router>
 
                   <Switch>
