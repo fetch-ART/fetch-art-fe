@@ -1,19 +1,21 @@
 import React, { Component } from 'react'
 import request from 'superagent';
 import ListItem from './ListItem.js';
-
+import Header from './Header.js';
 
 export default class FavoritesPage extends Component {
 
     state = {
-        data: []
+        data: [],
+        newData: ''
     }
 
+
     loadFavorites = async () => {
-        const fetchedData = await request.get(`http://localhost:3000/api/favorites`).set('Authorization', this.props.token)
+        const fetchedData = await request.get(`http://nameless-hollows-93608.herokuapp.com/api/favorites`).set('Authorization', this.props.token)
 
         const fetchedImages = await Promise.all(fetchedData.body.map((favImage) => {
-            return request.get(`http://localhost:3000/api/detail/${favImage.image_id}`).set('Authorization', this.props.token)
+            return request.get(`http://nameless-hollows-93608.herokuapp.com/api/detail/${favImage.image_id}`).set('Authorization', this.props.token)
         }));
 
         this.setState({ data: fetchedImages.map(image => image.body)});
@@ -26,16 +28,28 @@ export default class FavoritesPage extends Component {
 
     }
 
+    handleClick = async (item) => {
+
+       
+        console.log(item)
+        await request.delete(`http://nameless-hollows-93608.herokuapp.com/api/favorites/${item.id}`).set('Authorization', this.props.token)
+        
+        
+       
+       await this.loadFavorites();
+    }
+
     render() {
 
         return (
             <>
             <div>
+                <Header />
                 {
                     this.state.data.map(item => {
                         return  <div>
                             <ListItem detail={item}/>
-                            <button>Remove</button>
+                            <button onClick={ () => this.handleClick(item)}>Remove</button>
                         </div>
                     })
                 }

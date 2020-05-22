@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import request from 'superagent';
+import Header from './Header.js';
 
 export default class ImageDetailPage extends Component {
     
@@ -9,7 +10,7 @@ export default class ImageDetailPage extends Component {
     }
 
     componentDidMount = async () => { 
-            const fetchedData = await request.get(`http://localhost:3000/api/detail/${this.props.match.params.id}`).set('Authorization', this.props.token)
+            const fetchedData = await request.get(`http://nameless-hollows-93608.herokuapp.com/api/detail/${this.props.match.params.id}`).set('Authorization', this.props.token)
 
             
 
@@ -22,7 +23,7 @@ export default class ImageDetailPage extends Component {
     //can pass down the object from list page as a prop, or we can grab from the id in the url 
     // 
     handleClick = async () => { 
-        const fetchedData = await request.post('http://localhost:3000/api/favorites', { image_id: this.props.match.params.id }).set('Authorization', this.props.token)
+        const fetchedData = await request.post('http://nameless-hollows-93608.herokuapp.com/api/favorites', { image_id: this.props.match.params.id }).set('Authorization', this.props.token)
 
         this.setState({ favorites: fetchedData.body});
         this.props.history.push('/favorites')
@@ -33,6 +34,7 @@ export default class ImageDetailPage extends Component {
         // console.log(this.props.match.params)
         return (
             <div>
+                <Header />
                 <img src= {this.state.image && this.state.image.urls.regular} 
                 alt="" />
                 <h1>Photographer Name: {this.state.image && this.state.image.user.name} </h1>

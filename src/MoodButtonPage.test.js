@@ -1,9 +1,8 @@
 import React from 'react';
-import App from './App.js';
+import MoodButtonPage from './MoodButtonPage.js';
 import { shallow } from 'enzyme';
 
 test('renders learn react link', () => {
-  const wrapper = shallow(<App/>)
+  const wrapper = shallow(<MoodButtonPage/>)
   expect(wrapper).toMatchSnapshot()
 });
-
