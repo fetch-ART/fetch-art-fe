@@ -12,7 +12,10 @@
 * 1.0.00
 
 ## A list of any libraries, frameworks, or packages that your application requires in order to properly function
-* n/a though we used Unsplash as our API 
+* Unsplash as our API 
+* gradient for background gradient transition
+* webkit-linear-gradient for about us header gradient
+
  
 ## Instructions that the user may need to follow in order to get your application up and running on their own computer
 * Signup with us if you haven't already by clicking the Signup Button on the Splash Page
