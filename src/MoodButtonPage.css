@@ -41,6 +41,26 @@
     background-color: pink;
 }
 
+.page-buttons { 
+    margin: 30px;
+    padding: 40px;
+    text-transform: lowercase;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 30%;
+    width: 150px;
+    height: 150px;
+    color: white;
+    /* text-shadow: black 1px 1px; */
+    font-size: x-large;
+    font-family: 'Unica One', cursive;
+    background-image: linear-gradient(bisque, salmon, rgba(173, 67, 249, 0.507));
+}
+
+.page-buttons:hover {
+    cursor: pointer;
+    background-image: linear-gradient(rgba(173, 67, 249, 0.507), salmon, bisque);
+}
+
 .calm-button {
     margin: 30px;
     padding: 40px;
@@ -144,3 +164,9 @@
     background-color: pink;
 }
 
+.mood-images-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
