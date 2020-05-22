@@ -3,6 +3,7 @@ import request from 'superagent'
 // import { Link } from 'react-router-dom'
 import ListItem from './ListItem.js'
 import './MoodButtonPage.css'
+import Header from './Header.js';
 
 export default class MoodButtonPage extends Component {
     state = {
@@ -33,6 +34,7 @@ export default class MoodButtonPage extends Component {
         return (
 
                 <div className='button-div'>
+                    <Header />
                     <button className='happy-button' onClick={ () => this.handleClick('happy')}>Happy</button>
                     <button className='calm-button' onClick={ () => this.handleClick('calm')}>Calm</button>
                     <button className='love-button' onClick={ () => this.handleClick('love')}>Love</button>

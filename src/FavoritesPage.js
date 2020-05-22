@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import request from 'superagent';
 import ListItem from './ListItem.js';
-
+import Header from './Header.js';
 
 export default class FavoritesPage extends Component {
 
@@ -44,6 +44,7 @@ export default class FavoritesPage extends Component {
         return (
             <>
             <div>
+                <Header />
                 {
                     this.state.data.map(item => {
                         return  <div>
