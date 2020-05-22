@@ -126,3 +126,9 @@
     background-color: pink;
 }
 
+.mood-images-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
