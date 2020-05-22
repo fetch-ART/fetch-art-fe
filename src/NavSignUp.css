@@ -1,4 +1,4 @@
-button {
+.home-buttons {
     margin-top: 30px;
     margin-left: 15px;
     background-color: rgb(173, 233, 0);
@@ -8,12 +8,12 @@ button {
     cursor: pointer;
     }
 
-button:hover{
+.home-buttons:hover{
     background-color: rgb(254, 206, 99);
     color: rgb(211, 38, 104);
 }
 
-.nav-buttons {
+ /* .nav-buttons {
     border: 2px, black;
     display: flex;
     align-items: flex-start;
@@ -23,8 +23,8 @@ button:hover{
   .about-app {
       width: 75%;
       text-align: center;
-  }
+  } */
 
   img {
     width: 500px;
-  }
+  } 
