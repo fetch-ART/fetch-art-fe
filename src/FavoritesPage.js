@@ -42,7 +42,7 @@ export default class FavoritesPage extends Component {
                     this.state.data.map(item => {
                         return  <div className='favorites-list'>
                             <ListItem detail={ item }/>
-                            <button onClick={ () => this.handleClick(item) }>Remove</button>
+                            <button onClick={ () => this.handleClick(item)} className="remove-button">Remove</button>
                         </div>
                     })
                 }

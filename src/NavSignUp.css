@@ -19,11 +19,6 @@
     text-shadow: black 1px 1px;
 }
 
-/* this was controlling all the images sizes, so if we want to bring it back, it is here */
-  /* img {
-    width: 500px;
-  }  */
-
   .about-app {
     font-family: 'Unica One', cursive;
     font-size: x-large;

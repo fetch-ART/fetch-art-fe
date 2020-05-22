@@ -10,10 +10,9 @@ margin-bottom: 40px;
 }
 
 .detail-page-h3 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  color: black;
-  margin: 0px;
+    color: bisque;
+    text-shadow: rgb(20, 19, 16) 2px 2px;
+    font-size: 40px;
 }
 
 .detail-image {
@@ -23,15 +22,19 @@ margin-bottom: 40px;
 
 .favorite-button {
     margin-top: 30px;
-    margin-left: 15px;
-    background-color: rgb(173, 233, 0);
-    color: rgb(125, 10, 160);
-    font-family: 'Roboto', sans-serif;
+    margin-left: 30px;
+    background-color: rgb(117, 187, 117);
+    color: whitesmoke;
+    font-family: 'Unica One', cursive;
     font-weight: 700;
     cursor: pointer;
+    padding: 30px;
+    font-size: large;
+    border-radius: 30px;
     }
 
 .favorite-button:hover{
-    background-color: rgb(254, 206, 99);
-    color: rgb(211, 38, 104);
+    background-color:gold;
+    color: hotpink;
+    text-shadow: black 1px 1px;
 }
