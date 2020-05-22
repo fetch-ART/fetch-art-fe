@@ -1,9 +1,8 @@
 import React from 'react';
-import App from './App.js';
 import { shallow } from 'enzyme';
+import Header from './Header';
 
 test('renders learn react link', () => {
-  const wrapper = shallow(<App/>)
+  const wrapper = shallow(<Header/>)
   expect(wrapper).toMatchSnapshot()
 });
-

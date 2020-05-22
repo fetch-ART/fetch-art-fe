@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import request from 'superagent';
+import Header from './Header.js';
 
 export default class ImageDetailPage extends Component {
     
@@ -33,6 +34,7 @@ export default class ImageDetailPage extends Component {
         // console.log(this.props.match.params)
         return (
             <div>
+                <Header />
                 <img src= {this.state.image && this.state.image.urls.regular} 
                 alt="" />
                 <h1>Photographer Name: {this.state.image && this.state.image.user.name} </h1>

@@ -1,9 +1,12 @@
 import React from 'react';
-import App from './App.js';
 import { shallow } from 'enzyme';
+import ListItem from './ListItem.js';
 
 test('renders learn react link', () => {
-  const wrapper = shallow(<App/>)
+  const wrapper = shallow(<ListItem detail={
+        {
+          urls: {}
+        }
+    }/>)
   expect(wrapper).toMatchSnapshot()
 });
-
