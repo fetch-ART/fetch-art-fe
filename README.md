@@ -13,7 +13,7 @@
 
 ## A list of any libraries, frameworks, or packages that your application requires in order to properly function
 * Unsplash as our API 
-* gradient for background gradient transition
+* gradient keyframe from CodePen io for background gradient transition
 * webkit-linear-gradient for about us header gradient
 
  
