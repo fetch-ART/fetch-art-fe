@@ -9,7 +9,6 @@ export default class DetailPage extends Component {
                 <Link to={`/detail/${this.props.detail.id}`}>
                 <section>
 
-
                     <img src = {this.props.detail.urls.regular} alt={this.props.detail.alt_description}  />
 
                 </section>
