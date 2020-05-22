@@ -4,6 +4,14 @@
   text-align: center;
 }
 
+.footer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-family: 'Unica One', cursive;
+  color: white;
+}
+
 .center-elements {
 display: flex;
 align-items: center;
