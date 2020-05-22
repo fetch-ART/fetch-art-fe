@@ -4,6 +4,7 @@ import request from 'superagent'
 import ListItem from './ListItem.js'
 import './MoodButtonPage.css'
 import Header from './Header.js';
+import MusicPlayer from './MusicPlayer.js'
 
 export default class MoodButtonPage extends Component {
     state = {
@@ -33,27 +34,33 @@ export default class MoodButtonPage extends Component {
         console.log(this.state.data);
         return (
 
-                <div className='button-div'>
+                <section className="mood-button-page-main-container">
+                    
                     <Header />
-                    <button className='happy-button' onClick={ () => this.handleClick('happy')}>Happy</button>
-                    <button className='calm-button' onClick={ () => this.handleClick('calm')}>Calm</button>
-                    <button className='love-button' onClick={ () => this.handleClick('love')}>Love</button>
-                    <button className='med-button' onClick={ () => this.handleClick('meditative')}>Meditate</button>
-                    <button className='friend-button' onClick={ () => this.handleClick('friend')}>Friend</button>
-                    <button className='relax-button' onClick={ () => this.handleClick('relax')}>Relax</button>
+
+                    <MusicPlayer />
+
+                    <main className='button-div'>
+                        <button className='happy-button' onClick={ () => this.handleClick('happy')}>Happy</button>
+                        <button className='calm-button' onClick={ () => this.handleClick('calm')}>Calm</button>
+                        <button className='love-button' onClick={ () => this.handleClick('love')}>Love</button>
+                        <button className='med-button' onClick={ () => this.handleClick('meditative')}>Meditate</button>
+                        <button className='friend-button' onClick={ () => this.handleClick('friend')}>Friend</button>
+                        <button className='relax-button' onClick={ () => this.handleClick('relax')}>Relax</button>
+                    </main>
             
-                <div className='mood-images-div'>
-                    {
-                        this.state.data.map(item => {
-                            return  <div>
-                                <ListItem detail={item}/>
-                            </div>
-                        })
-                    }
-                </div>
+                    <div className='mood-images-div'>
+                        {
+                            this.state.data.map(item => {
+                                return  <div>
+                                    <ListItem detail={item}/>
+                                </div>
+                            })
+                        }
+                    </div>
                     
 
-                </div>
+                </section>
             
         )
     }

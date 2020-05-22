@@ -1,8 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
 
-.button-div {
+.mood-button-page-main-containe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    display: inline-block; 
+.button-div {
+    display: flex; 
+    justify-content: center;
+    flex-direction: row;
+}
+
+.mood-images-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .happy-button {
@@ -47,6 +61,7 @@
     cursor: pointer;
     background-color: pink;
 }
+
 .love-button {
     margin: 30px;
     padding: 40px;
@@ -62,11 +77,14 @@
     font-family: 'Unica One', cursive;
     
 }
+
 .love-button:hover {
     cursor: pointer;
     background-color: pink;
 }
+
 .med-button {
+    text-align: center;
     margin: 30px;
     padding: 40px;
     text-transform: lowercase;
@@ -76,12 +94,11 @@
     background-color: rgb(117, 187, 117);
     width: 150px;
     height: 150px;
-    text-align: center;
     color: black;
     font-size: x-large;
     font-family: 'Unica One', cursive;
-    
 }
+
 .med-button:hover {
     cursor: pointer;
     background-color: pink;
@@ -102,6 +119,7 @@
     font-family: 'Unica One', cursive;
 
 }
+
 .friend-button:hover {
     cursor: pointer;
     background-color: pink;

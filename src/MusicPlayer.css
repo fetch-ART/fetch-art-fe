@@ -1,0 +1,12 @@
+.music-player-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.music-player-ptag {
+    font-family: 'Unica One', cursive;
+    color: white;
+    font-size: 20px;
+}
