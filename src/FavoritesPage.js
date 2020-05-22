@@ -11,10 +11,10 @@ export default class FavoritesPage extends Component {
     }
 
     loadFavorites = async () => {
-        const fetchedData = await request.get(`http://nameless-hollows-93608.herokuapp.com/api/favorites`).set('Authorization', this.props.token)
+        const fetchedData = await request.get(`https://nameless-hollows-93608.herokuapp.com/api/favorites`).set('Authorization', this.props.token)
 
         const fetchedImages = await Promise.all(fetchedData.body.map((favImage) => {
-            return request.get(`http://nameless-hollows-93608.herokuapp.com/api/detail/${favImage.image_id}`).set('Authorization', this.props.token)
+            return request.get(`https://nameless-hollows-93608.herokuapp.com/api/detail/${favImage.image_id}`).set('Authorization', this.props.token)
         }));
 
         this.setState({ data: fetchedImages.map(image => image.body)});
@@ -28,7 +28,7 @@ export default class FavoritesPage extends Component {
     handleClick = async (item) => {
         console.log(item)
 
-        await request.delete(`http://nameless-hollows-93608.herokuapp.com/api/favorites/${item.id}`).set('Authorization', this.props.token)
+        await request.delete(`https://nameless-hollows-93608.herokuapp.com/api/favorites/${item.id}`).set('Authorization', this.props.token)
 
        await this.loadFavorites();
     }
