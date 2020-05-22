@@ -41,9 +41,9 @@ export default class ImageDetailPage extends Component {
                 <img className="detail-image" src= {this.state.image && this.state.image.urls.regular}
                 alt="" />
 
-                <h3><strong>Photographer Name: </strong> {this.state.image && this.state.image.user.name} </h3>
+                <h3 className="detail-page-h3"><strong>Photographer Name: </strong> {this.state.image && this.state.image.user.name} </h3>
 
-                <h3><strong>Insta: </strong>{ this.state.image && this.state.image.user.instagram_username} </h3>
+                <h3 className="detail-page-h3"><strong>Insta: </strong>{ this.state.image && this.state.image.user.instagram_username} </h3>
 
                 <button className='favorite-button'onClick={this.handleClick}>Favorite</button>
                 </section>
