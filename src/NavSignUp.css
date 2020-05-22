@@ -1,30 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+
 .home-buttons {
     margin-top: 30px;
-    margin-left: 15px;
-    background-color: rgb(173, 233, 0);
-    color: rgb(125, 10, 160);
-    font-family: 'Roboto', sans-serif;
+    margin-left: 30px;
+    background-color: rgb(117, 187, 117);
+    color: whitesmoke;
+    font-family: 'Unica One', cursive;
     font-weight: 700;
     cursor: pointer;
+    padding: 30px;
+    font-size: large;
+    border-radius: 30px;
+
     }
 
 .home-buttons:hover{
-    background-color: rgb(254, 206, 99);
-    color: rgb(211, 38, 104);
+    background-color:gold;
+    color: hotpink;
+    text-shadow: black 1px 1px;
 }
-
- /* .nav-buttons {
-    border: 2px, black;
-    display: flex;
-    align-items: flex-start;
-    text-align: right;
-  }
-
-  .about-app {
-      width: 75%;
-      text-align: center;
-  } */
 
   img {
     width: 500px;
   } 
+
+  .about-app {
+    font-family: 'Unica One', cursive;
+    font-size: x-large;
+  }
