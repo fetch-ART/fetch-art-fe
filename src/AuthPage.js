@@ -45,7 +45,10 @@ export default class AuthPage extends Component {
 
         return (
         <section>
-            <img src={LogoNoText} alt=""/>
+            <div className='auth-pg-logo'>
+                <img src={LogoNoText} alt=""/>
+            </div>
+            
             
             <section className="divider-bar"> </section>
 
