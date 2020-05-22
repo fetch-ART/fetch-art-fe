@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import request from 'superagent'
 // import { Link } from 'react-router-dom'
 import ListItem from './ListItem.js'
+import Header from './Header.js';
 
 export default class MoodButtonPage extends Component {
     state = {
@@ -31,6 +32,7 @@ export default class MoodButtonPage extends Component {
         console.log(this.state.data);
         return (
             <div>
+                <Header />
                 <button className='mood-button' onClick={ () => this.handleClick('happy')}>Happy</button>
                 <button className='mood-button' onClick={ () => this.handleClick('calm')}>Calm</button>
                 <button className='mood-button' onClick={ () => this.handleClick('love')}>Love</button>
@@ -45,7 +47,6 @@ export default class MoodButtonPage extends Component {
                         </div>
                     })
                 }
-
             </div>
         )
     }
