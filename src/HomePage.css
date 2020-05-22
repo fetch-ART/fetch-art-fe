@@ -4,7 +4,6 @@
   text-align: center;
 }
 
-
 .center-elements {
 display: flex;
 align-items: center;
@@ -16,3 +15,8 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
+
+.splash-page-logo-image {
+  width: 500px;
+  border: 4px rgba(49, 220, 37, 0.596) solid;
+} 

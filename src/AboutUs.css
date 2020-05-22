@@ -45,7 +45,7 @@
     flex-direction: column;
     width: 300px;
     height: 650px;
-    border: 4px rgba(49, 220, 37, 0.596) solid;
+    border: 6px rgba(49, 220, 37, 0.596) solid;
     background-image: linear-gradient(rgba(222, 51, 91, 0.507), rgba(254, 225, 107, 0.644), rgba(173, 67, 249, 0.507));
     border-radius: 15px 50px;
     align-items: center;

@@ -15,7 +15,7 @@ export default class HomePage extends Component {
                 </section>
 
                 <div className='center-elements'>
-                    <img src={ Logo } alt=''/>
+                    <img src={ Logo } alt='' className="splash-page-logo-image"/>
 
                     <section className="about-app">
 

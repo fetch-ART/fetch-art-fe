@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
 
-.auth-pg-logo {
+.auth-pg-logo-section {
     display: flex; 
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
 
+}
+
+.signup-page-logo-image {
+    width: 500px;
+    border: 4px rgba(49, 220, 37, 0.596) solid; 
 }
 
 .flex-container { 

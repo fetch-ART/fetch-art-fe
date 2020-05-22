@@ -11,7 +11,6 @@
     padding: 30px;
     font-size: large;
     border-radius: 30px;
-
     }
 
 .home-buttons:hover{
@@ -20,9 +19,10 @@
     text-shadow: black 1px 1px;
 }
 
-  img {
+/* this was controlling all the images sizes, so if we want to bring it back, it is here */
+  /* img {
     width: 500px;
-  } 
+  }  */
 
   .about-app {
     font-family: 'Unica One', cursive;

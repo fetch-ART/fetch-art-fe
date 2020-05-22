@@ -65,8 +65,3 @@ export default class MoodButtonPage extends Component {
         )
     }
 }
-
-
-// list page is working when "happy" button is clicked, detail page shows "cannot read property description of undefined"
-// we will pick back up at the detail page
-// afterward we need to hook up our backend to our API
