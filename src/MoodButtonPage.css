@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
 
 .button-div {
 
@@ -22,17 +22,17 @@
 .happy-button {
     margin: 30px;
     padding: 40px;
-    font-size: large;
     text-transform: lowercase;
     border-radius: 30%;
     border: solid 2px;
     border-color: gold;
     background-color: gold;
-    color: black;
-    text-shadow: 1px 1px white;
-    font-family: 'Abril Fatface', cursive; 
     width: 150px;
     height: 150px;
+    color: black;
+    text-shadow: whitesmoke 1px 1px;
+    font-size: x-large;
+    font-family: 'Unica One', cursive;
 
 }
 
@@ -44,15 +44,16 @@
 .calm-button {
     margin: 30px;
     padding: 40px;
-    font-size: large;
     text-transform: lowercase;
     border-radius: 30%;
     border: solid 2px;
-    border-color: gold;
-    background-color: gold;
+    border-color: rgb(87, 170, 244);
+    background-color: rgb(87, 170, 244);
+    width: 150px;
+    height: 150px;
     color: black;
-    text-shadow: 1px 1px white;
-    font-family: 'Abril Fatface', cursive; 
+    font-size: x-large;
+    font-family: 'Unica One', cursive;
     
 }
 
@@ -63,15 +64,16 @@
 .love-button {
     margin: 30px;
     padding: 40px;
-    font-size: large;
     text-transform: lowercase;
     border-radius: 30%;
     border: solid 2px;
-    border-color: gold;
-    background-color: gold;
+    border-color:rgb(242, 103, 103);
+    background-color:rgb(242, 103, 103);
+    width: 150px;
+    height: 150px;
     color: black;
-    text-shadow: 1px 1px white;
-    font-family: 'Abril Fatface', cursive; 
+    font-size: x-large;
+    font-family: 'Unica One', cursive;
     
 }
 .love-button:hover {
@@ -81,18 +83,17 @@
 .med-button {
     margin: 30px;
     padding: 40px;
-    font-size: large;
     text-transform: lowercase;
     border-radius: 30%;
     border: solid 2px;
-    border-color: gold;
-    background-color: gold;
-    color: black;
-    text-shadow: 1px 1px white;
-    font-family: 'Abril Fatface', cursive; 
+    border-color: rgb(117, 187, 117);
+    background-color: rgb(117, 187, 117);
     width: 150px;
     height: 150px;
     text-align: center;
+    color: black;
+    font-size: x-large;
+    font-family: 'Unica One', cursive;
     
 }
 .med-button:hover {
@@ -103,16 +104,17 @@
 .friend-button {
     margin: 30px;
     padding: 40px;
-    font-size: large;
     text-transform: lowercase;
     border-radius: 30%;
     border: solid 2px;
-    border-color: gold;
-    background-color: gold;
+    border-color:rgb(210, 128, 210);
+    background-color: rgb(210, 128, 210);
+    width: 150px;
+    height: 150px;
     color: black;
-    text-shadow: 1px 1px white;
-    font-family: 'Abril Fatface', cursive; 
-    
+    font-size: x-large;
+    font-family: 'Unica One', cursive;
+
 }
 .friend-button:hover {
     cursor: pointer;
@@ -122,15 +124,16 @@
 .relax-button {
     margin: 30px;
     padding: 40px;
-    font-size: large;
     text-transform: lowercase;
     border-radius: 30%;
     border: solid 2px;
-    border-color: gold;
-    background-color: gold;
+    border-color:rgba(177, 241, 242, 0.879);
+    background-color:rgba(177, 241, 242, 0.879);
+    width: 150px;
+    height: 150px;
     color: black;
-    text-shadow: 1px 1px white;
-    font-family: 'Abril Fatface', cursive; 
+    font-size: x-large;
+    font-family: 'Unica One', cursive;
 }
 .relax-button:hover {
     cursor: pointer;
