@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
 .button-div {
 
     display: inline-block; 
@@ -28,7 +30,7 @@
     background-color: gold;
     color: black;
     text-shadow: 1px 1px white;
-    font-family: 'DM Mono', monospace;
+    font-family: 'Abril Fatface', cursive; 
     width: 150px;
     height: 150px;
 
@@ -50,7 +52,7 @@
     background-color: gold;
     color: black;
     text-shadow: 1px 1px white;
-    font-family: 'DM Mono', monospace;
+    font-family: 'Abril Fatface', cursive; 
     
 }
 
@@ -69,7 +71,7 @@
     background-color: gold;
     color: black;
     text-shadow: 1px 1px white;
-    font-family: 'DM Mono', monospace;
+    font-family: 'Abril Fatface', cursive; 
     
 }
 .love-button:hover {
@@ -87,7 +89,7 @@
     background-color: gold;
     color: black;
     text-shadow: 1px 1px white;
-    font-family: 'DM Mono', monospace;
+    font-family: 'Abril Fatface', cursive; 
     width: 150px;
     height: 150px;
     text-align: center;
@@ -109,7 +111,7 @@
     background-color: gold;
     color: black;
     text-shadow: 1px 1px white;
-    font-family: 'DM Mono', monospace;
+    font-family: 'Abril Fatface', cursive; 
     
 }
 .friend-button:hover {
