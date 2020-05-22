@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import request from 'superagent';
 import ListItem from './ListItem.js';
 import Header from './Header.js';
+import './FavoritesPage.css'
 
 export default class FavoritesPage extends Component {
 
@@ -30,12 +31,12 @@ export default class FavoritesPage extends Component {
 
     handleClick = async (item) => {
 
-       
+
         console.log(item)
         await request.delete(`http://nameless-hollows-93608.herokuapp.com/api/favorites/${item.id}`).set('Authorization', this.props.token)
-        
-        
-       
+
+
+
        await this.loadFavorites();
     }
 
@@ -47,7 +48,7 @@ export default class FavoritesPage extends Component {
                 <Header />
                 {
                     this.state.data.map(item => {
-                        return  <div>
+                        return  <div className='favorites-list'>
                             <ListItem detail={item}/>
                             <button onClick={ () => this.handleClick(item)}>Remove</button>
                         </div>
