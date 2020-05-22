@@ -10,7 +10,7 @@ export default class MoodButtonPage extends Component {
     state = {
         data: [],
         searchQuery: '',
-        page: 1
+        page: 0
 
     }
 
@@ -23,7 +23,7 @@ export default class MoodButtonPage extends Component {
         //find a way to hide our key
 
         await this.setState({ searchQuery: mood })
-
+        await this.setState({ page: 1 })
         const fetchData = await request.get(`http://nameless-hollows-93608.herokuapp.com/api/list/'${this.state.searchQuery}'&page=${this.state.page}`).set('Authorization', this.state.token)
 
         this.setState({ data: fetchData.body.results })
@@ -74,7 +74,7 @@ export default class MoodButtonPage extends Component {
                         <button className='friend-button' onClick={ () => this.handleClick('friend')}>Friend</button>
                         <button className='relax-button' onClick={ () => this.handleClick('relax')}>Relax</button>
 
-                        <button className="page-buttons" onClick={ () =>{this.moveToNextPage()}}>Next Page</button>
+                        {this.state.page > 0 && <button className="page-buttons" onClick={ () =>{this.moveToNextPage()}}>Next Page</button>}
                     </main>
             
                     <div className='mood-images-div'>
