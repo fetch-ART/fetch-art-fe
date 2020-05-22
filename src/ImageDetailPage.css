@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+
+.detail-block {
+display: flex;
+align-items: center;
+flex-direction: column;
+margin-top: 40px;
+margin-bottom: 40px;
+}
+
+.detail-page-h3 {
+    color: bisque;
+    text-shadow: rgb(20, 19, 16) 2px 2px;
+    font-size: 40px;
+}
+
+.detail-image {
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.favorite-button {
+    margin-top: 30px;
+    margin-left: 30px;
+    background-color: rgb(117, 187, 117);
+    color: whitesmoke;
+    font-family: 'Unica One', cursive;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 30px;
+    font-size: large;
+    border-radius: 30px;
+    }
+
+.favorite-button:hover{
+    background-color:gold;
+    color: hotpink;
+    text-shadow: black 1px 1px;
+}

@@ -11,6 +11,7 @@ import HomePage from './HomePage.js';
 import ImageDetailPage from './ImageDetailPage.js';
 import MoodButtonPage from './MoodButtonPage.js';
 import FavoritesPage from './FavoritesPage.js';
+import Footer from './Footer.js';
 
 
 export default class App extends Component {
@@ -71,6 +72,7 @@ export default class App extends Component {
                       
                       
                   </Switch>
+                  <Footer />
               </Router>
           </div>
       )

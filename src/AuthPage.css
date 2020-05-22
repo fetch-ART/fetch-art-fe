@@ -1,7 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
 
-img {
-    width: 20px;
+.auth-pg-logo-section {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+}
+
+.signup-page-logo-image {
+    width: 500px;
+    border: 4px rgba(49, 220, 37, 0.596) solid; 
 }
 
 .flex-container { 
@@ -12,13 +22,9 @@ img {
     margin-top: 100px;
 }
 
-.divider-bar {
-    background-color: greenyellow;
-    
-}
 
 .sign-up { 
-    border: 5px greenyellow solid;
+    border: 5px solid rgb(117, 187, 117);
     background-color: rgb(255, 255, 255);
     margin: 30px;
     padding: 5%;
@@ -29,7 +35,7 @@ img {
 }
 
 .sign-in { 
-    border: 5px greenyellow solid;
+    border: 5px solid rgb(117, 187, 117);
     background-color: rgb(255, 255, 255);
     margin: 30px;
     padding: 5%;
@@ -48,8 +54,10 @@ input {
 }
 
 h3 { 
-    color: rgb(125, 10, 160);
-    font-family: 'Roboto', sans-serif;
+    color: rgb(237, 173, 11);
+    text-shadow: rgb(20, 19, 16) 2px 2px;
+    font-size: 30px;
+    font-family: 'Unica One', cursive;
     font-weight: 700;
 }
 

@@ -4,6 +4,13 @@
   text-align: center;
 }
 
+.footer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-family: 'Unica One', cursive;
+  color: white;
+}
 
 .center-elements {
 display: flex;
@@ -16,3 +23,8 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
+
+.splash-page-logo-image {
+  width: 500px;
+  border: 4px rgba(49, 220, 37, 0.596) solid;
+} 

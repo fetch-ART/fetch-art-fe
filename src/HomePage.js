@@ -10,21 +10,23 @@ export default class HomePage extends Component {
         return (
             <div>
 
-            <div className='nav-buttons' >
-            <NavSignUp history={this.props.history} />
-            </div>
+                <section className='nav-buttons' >
+                <NavSignUp history={this.props.history} />
+                </section>
 
-        <div className='center-elements'>
-            <img src={ Logo } alt=''/>
+                <div className='center-elements'>
+                    <img src={ Logo } alt='' className="splash-page-logo-image"/>
 
-            <div className="about-app">
-
-
-                <p>This is an app made for those seeking a meditative space to find images inspired by a mood and to create a personalized favorites gallery.</p>
+                    <section className="about-app">
 
 
-            </div>
-            </div>
+                        <p>Made for those seeking a meditative space inspired by the emotions of every day.</p>
+                        <p>Find art that brings you joy in these wild, wild times.</p>
+                        <p>This app is brought to you by Feelings.</p>
+                
+                    </section>
+                </div>
+                
             </div>
         )
     }

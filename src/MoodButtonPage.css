@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+
+.mood-button-page-main-containe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-div {
+    display: flex; 
+    justify-content: center;
+    flex-direction: row;
+}
+
+.mood-images-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.happy-button {
+    margin: 30px;
+    padding: 40px;
+    text-transform: lowercase;
+    border-radius: 30%;
+    border: solid 2px;
+    border-color: gold;
+    background-color: gold;
+    width: 150px;
+    height: 150px;
+    color: black;
+    text-shadow: whitesmoke 1px 1px;
+    font-size: x-large;
+    font-family: 'Unica One', cursive;
+
+}
+
+.happy-button:hover {
+    cursor: pointer;
+    background-color: pink;
+}
+
+.page-buttons { 
+    margin: 30px;
+    padding: 40px;
+    text-transform: lowercase;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 30%;
+    width: 150px;
+    height: 150px;
+    color: white;
+    /* text-shadow: black 1px 1px; */
+    font-size: x-large;
+    font-family: 'Unica One', cursive;
+    background-image: linear-gradient(bisque, salmon, rgba(173, 67, 249, 0.507));
+}
+
+.page-buttons:hover {
+    cursor: pointer;
+    background-image: linear-gradient(rgba(173, 67, 249, 0.507), salmon, bisque);
+}
+
+.calm-button {
+    margin: 30px;
+    padding: 40px;
+    text-transform: lowercase;
+    border-radius: 30%;
+    border: solid 2px;
+    border-color: rgb(87, 170, 244);
+    background-color: rgb(87, 170, 244);
+    width: 150px;
+    height: 150px;
+    color: black;
+    font-size: x-large;
+    font-family: 'Unica One', cursive;
+    
+}
+
+.calm-button:hover {
+    cursor: pointer;
+    background-color: pink;
+}
+
+.love-button {
+    margin: 30px;
+    padding: 40px;
+    text-transform: lowercase;
+    border-radius: 30%;
+    border: solid 2px;
+    border-color:rgb(242, 103, 103);
+    background-color:rgb(242, 103, 103);
+    width: 150px;
+    height: 150px;
+    color: black;
+    font-size: x-large;
+    font-family: 'Unica One', cursive;
+    
+}
+
+.love-button:hover {
+    cursor: pointer;
+    background-color: pink;
+}
+
+.med-button {
+    text-align: center;
+    margin: 30px;
+    padding: 40px;
+    text-transform: lowercase;
+    border-radius: 30%;
+    border: solid 2px;
+    border-color: rgb(117, 187, 117);
+    background-color: rgb(117, 187, 117);
+    width: 150px;
+    height: 150px;
+    color: black;
+    font-size: x-large;
+    font-family: 'Unica One', cursive;
+}
+
+.med-button:hover {
+    cursor: pointer;
+    background-color: pink;
+}
+
+.friend-button {
+    margin: 30px;
+    padding: 40px;
+    text-transform: lowercase;
+    border-radius: 30%;
+    border: solid 2px;
+    border-color:rgb(210, 128, 210);
+    background-color: rgb(210, 128, 210);
+    width: 150px;
+    height: 150px;
+    color: black;
+    font-size: x-large;
+    font-family: 'Unica One', cursive;
+
+}
+
+.friend-button:hover {
+    cursor: pointer;
+    background-color: pink;
+}
+
+.relax-button {
+    margin: 30px;
+    padding: 40px;
+    text-transform: lowercase;
+    border-radius: 30%;
+    border: solid 2px;
+    border-color:rgba(177, 241, 242, 0.879);
+    background-color:rgba(177, 241, 242, 0.879);
+    width: 150px;
+    height: 150px;
+    color: black;
+    font-size: x-large;
+    font-family: 'Unica One', cursive;
+}
+.relax-button:hover {
+    cursor: pointer;
+    background-color: pink;
+}
+
+.mood-images-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}

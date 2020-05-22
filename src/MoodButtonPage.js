@@ -2,12 +2,15 @@ import React, { Component } from 'react'
 import request from 'superagent'
 // import { Link } from 'react-router-dom'
 import ListItem from './ListItem.js'
+import './MoodButtonPage.css'
 import Header from './Header.js';
+import MusicPlayer from './MusicPlayer.js'
 
 export default class MoodButtonPage extends Component {
     state = {
         data: [],
-        searchQuery: ''
+        searchQuery: '',
+        page: 0
 
     }
 
@@ -20,39 +23,73 @@ export default class MoodButtonPage extends Component {
         //find a way to hide our key
 
         await this.setState({ searchQuery: mood })
-
-        const fetchData = await request.get(`http://nameless-hollows-93608.herokuapp.com/api/list/'${this.state.searchQuery}'`).set('Authorization', this.state.token)
+        await this.setState({ page: 1 })
+        const fetchData = await request.get(`http://nameless-hollows-93608.herokuapp.com/api/list/'${this.state.searchQuery}'&page=${this.state.page}`).set('Authorization', this.state.token)
 
         this.setState({ data: fetchData.body.results })
         
     }
+
+    moveToNextPage = async () => {
+        
+        const nextPage = this.state.page + 1;
+        this.setState({ page: nextPage })
+
+        const response = await request.get(`http://nameless-hollows-93608.herokuapp.com/api/list/'${this.state.searchQuery}'&page=${nextPage}`).set('Authorization', this.state.token);
+        
+        const results = response.body.results;
+        this.setState({ data: results})
+      }
+
+      moveToPrevPage = async () => {
+        
+        const prevPage = this.state.page - 1;
+        this.setState({ page: prevPage })
+
+        const response = await request.get(`http://nameless-hollows-93608.herokuapp.com/api/list/'${this.state.searchQuery}'&page=${prevPage}`).set('Authorization', this.state.token);
+        
+        const results = response.body.results;
+        this.setState({ data: results})
+      }
     
     render() {
         console.log(this.state.searchQuery)
         console.log(this.state.data);
+        console.log(this.state.page)
         return (
-            <div>
-                <Header />
-                <button className='mood-button' onClick={ () => this.handleClick('happy')}>Happy</button>
-                <button className='mood-button' onClick={ () => this.handleClick('calm')}>Calm</button>
-                <button className='mood-button' onClick={ () => this.handleClick('love')}>Love</button>
-                <button className='mood-button' onClick={ () => this.handleClick('meditative')}>Meditative</button>
-                <button className='mood-button' onClick={ () => this.handleClick('friend')}>Friend</button>
-                <button className='mood-button' onClick={ () => this.handleClick('relax')}>Relax</button>
 
-                {
-                    this.state.data.map(item => {
-                        return  <div>
-                            <ListItem detail={item}/>
-                        </div>
-                    })
-                }
-            </div>
+                <section className="mood-button-page-main-container">
+                    
+                    <Header />
+
+                    <MusicPlayer />
+
+                    <main className='button-div'>
+                        {this.state.page > 1 && <button className="page-buttons" onClick={ () =>{this.moveToPrevPage()}}>Prev Page</button>}
+
+                        <button className='happy-button' onClick={ () => this.handleClick('happy')}>Happy</button>
+                        <button className='calm-button' onClick={ () => this.handleClick('calm')}>Calm</button>
+                        <button className='love-button' onClick={ () => this.handleClick('love')}>Love</button>
+                        <button className='med-button' onClick={ () => this.handleClick('meditative')}>Meditate</button>
+                        <button className='friend-button' onClick={ () => this.handleClick('friend')}>Friend</button>
+                        <button className='relax-button' onClick={ () => this.handleClick('relax')}>Relax</button>
+
+                        {this.state.page > 0 && <button className="page-buttons" onClick={ () =>{this.moveToNextPage()}}>Next Page</button>}
+                    </main>
+            
+                    <div className='mood-images-div'>
+                        {
+                            this.state.data.map(item => {
+                                return  <div>
+                                    <ListItem detail={item}/>
+                                </div>
+                            })
+                        }
+                    </div>
+                    
+
+                </section>
+            
         )
     }
 }
-
-
-// list page is working when "happy" button is clicked, detail page shows "cannot read property description of undefined"
-// we will pick back up at the detail page
-// afterward we need to hook up our backend to our API

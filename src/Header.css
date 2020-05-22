@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+
+.header {
+    background-color: bisque;
+    font-family: 'Unica One', cursive;
+    font-size: x-large;
+    padding: 30px;
+    margin: 50px;
+    border-radius: 30px;
+    text-align: center;
+  }
+
+  .header-title {
+    color: rgb(237, 173, 11);
+    text-shadow: rgb(20, 19, 16) 2px 2px;
+    font-size: 50px;
+  }
+  
+  a:link {
+    text-decoration: none;
+    color: lightskyblue;
+  }
+
+  a:visited {
+    text-decoration: none;
+    color: lightskyblue;
+  }
+  
+  a:hover {
+    color:rgb(96, 148, 96);
+  }
