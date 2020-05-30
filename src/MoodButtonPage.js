@@ -65,8 +65,10 @@ export default class MoodButtonPage extends Component {
                     <MusicPlayer />
 
                     <main className='button-div'>
+                        {/* nice conditiona rendering! */}
                         {this.state.page > 1 && <button className="page-buttons" onClick={ () =>{this.moveToPrevPage()}}>Prev Page</button>}
 
+                        {/* To make this dry, you could made an array of strings to mapp over along these lines: ['happy', 'calm', . . . ].map(item => <button className='happy-button' onClick={ () => this.handleClick(item)}>item</button>) */}
                         <button className='happy-button' onClick={ () => this.handleClick('happy')}>Happy</button>
                         <button className='calm-button' onClick={ () => this.handleClick('calm')}>Calm</button>
                         <button className='love-button' onClick={ () => this.handleClick('love')}>Love</button>
@@ -74,6 +76,7 @@ export default class MoodButtonPage extends Component {
                         <button className='friend-button' onClick={ () => this.handleClick('friend')}>Friend</button>
                         <button className='relax-button' onClick={ () => this.handleClick('relax')}>Relax</button>
 
+                     {/* nice conditiona rendering! */}
                         {this.state.page > 0 && <button className="page-buttons" onClick={ () =>{this.moveToNextPage()}}>Next Page</button>}
                     </main>
             

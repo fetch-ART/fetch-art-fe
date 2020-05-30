@@ -11,6 +11,7 @@ export default class MusicPlayer extends Component {
                     <p className="music-player-ptag">Press the Play Button to Listen to Some Feel Good Tones!</p>
                     
                     <audio controls preload="">
+                        // nice use of imported mp3!
                         <source src={Sound} type="audio/mpeg"></source>
                     </audio>
 
