@@ -1,3 +1,6 @@
+## Deployed Site
+* https://fetch-art.netlify.app/
+
 ## Name of Project 
 * Fetch ART
 
