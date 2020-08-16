@@ -25,9 +25,10 @@
 * If you have, you can click the Login Button to login
 * Input your email and password 
 * On the Mood Page, click on the mood button that you want to view images of that feeling, so you can have that feeling too!
-* Then, click on the individual image that you would like to save for later 
+* Then, click on the individual image that you would like to "Favorite" for later, this will take you to a details page to learn more about the image / artist.
 * Finally, you can go to your Favorites Page to view your favorite feelings. 
-* If you no longer like your image, you can also remove it 
+* If you no longer like your image, you can also remove it.
+* You may log back in with your credentials at any time through the power of tokens, local storage, and authentication routes in the backend. 
 
 ## Clearly defined API endpoints with sample responses
 * Endpoint: app.get'/api/list/:mood'
