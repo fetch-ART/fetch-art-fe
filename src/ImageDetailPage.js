@@ -13,11 +13,7 @@ export default class ImageDetailPage extends Component {
     componentDidMount = async () => {
             const fetchedData = await request.get(`https://nameless-hollows-93608.herokuapp.com/api/detail/${this.props.match.params.id}`).set('Authorization', this.props.token)
 
-
-
             this.setState({ image: fetchedData.body});
-
-
         }
 
 
@@ -34,6 +30,7 @@ export default class ImageDetailPage extends Component {
     render() {
         // console.log(this.props.match.params)
         return (
+            // nice sanity checking with the &&s
             <div>
                 <Header />
                 <section className='detail-block'>

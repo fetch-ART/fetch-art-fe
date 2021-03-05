@@ -5,6 +5,7 @@ import './NavSignUp.css';
 export default class NavSignUp extends Component {
 
     handleSignUpClick = () => {
+        // seems like you could have handled this using react-router <Link /> components
         this.props.history.push("/auth")
     }
 

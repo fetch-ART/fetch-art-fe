@@ -29,6 +29,7 @@ export default class AboutUs extends Component {
 
                     <section className="all-person-card-container">
                         
+                        {/* would have liked to see these repeated sections turned into components */}
                         <section className="one-person-div"> 
                             <img src={Briseida} alt="" className="one-person-image"/>
                             <h3 className="name-header">Briseida</h3>
